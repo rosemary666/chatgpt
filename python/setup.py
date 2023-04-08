@@ -3,7 +3,7 @@ from __future__ import print_function
 from __future__ import division
 
 import setuptools
-from setuptools import find_namespace_packages
+from setuptools import find_packages
 import os
 
 def _process_requirements():
@@ -17,7 +17,7 @@ def _process_requirements():
             requires.append(pkg)
     return requires
 
-with open("README.md", "r") as fh:
+with open("../README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
@@ -29,9 +29,10 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/rosemary666/chatgpt",
-    packages=find_namespace_packages("python"),
-    package_dir={"": "python"},
-    py_modules=["py_chatgpt"],
+    packages=[
+        package for package in find_packages()
+        if package.startswith('py_chatgpt')
+    ],
     install_requires=_process_requirements(),
     setup_requires=[],
     license="Apache License 2.0",
