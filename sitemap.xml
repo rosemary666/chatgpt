@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+         <loc>https://rosemary666.github.io/chatgpt/</loc>
+         <lastmod>2023-04-08</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://rosemary666.github.io/chatgpt/zh/"/>
+         
+    </url>
+    <url>
+         <loc>https://rosemary666.github.io/chatgpt/about/changelog/</loc>
+         <lastmod>2023-04-08</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://rosemary666.github.io/chatgpt/zh/about/changelog/"/>
+         
+    </url>
+    <url>
+         <loc>https://rosemary666.github.io/chatgpt/api/errcode/chatgpt_service_errcode/</loc>
+         <lastmod>2023-04-08</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://rosemary666.github.io/chatgpt/zh/api/errcode/chatgpt_service_errcode/"/>
+         
+    </url>
+    <url>
+         <loc>https://rosemary666.github.io/chatgpt/api/swagger/chatgpt_service_swagger/</loc>
+         <lastmod>2023-04-08</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://rosemary666.github.io/chatgpt/zh/api/swagger/chatgpt_service_swagger/"/>
+         
+    </url>
+</urlset>
