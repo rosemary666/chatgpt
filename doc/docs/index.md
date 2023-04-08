@@ -21,7 +21,7 @@ chatgpt库的封装调用, 支持流式和非流式。
 
 ### 安装
 ```shell
-pip install py_chatgpt
+pip install py-chatgpt
 ```
 
 ### 底层调用 

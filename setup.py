@@ -21,7 +21,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="py_chatgpt",
+    name="py-chatgpt",
     version="0.1.0",
     author="rosemary666",
     author_email="",
