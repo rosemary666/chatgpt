@@ -21,7 +21,7 @@ from typing import Dict, List, Union
 from py_chatgpt_plus.errors import ChatGptError
 from pytablewriter import MarkdownTableWriter
 
-module_paths = ["py_chatgpt.errors.error"]
+module_paths = ["py_chatgpt_plus.errors.error"]
 
 
 def dynamic_import(module):

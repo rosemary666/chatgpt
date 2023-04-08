@@ -8,7 +8,7 @@
                     "200": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/CustomResponsea38c017e-cb39-4a82-b5a0-8d12d664a506"
+                            "$ref": "#/definitions/CustomResponse6829f10b-d4aa-47f8-ae05-f86b995601e8"
                         }
                     }
                 },
@@ -98,7 +98,7 @@
             },
             "type": "object"
         },
-        "CustomResponsea38c017e-cb39-4a82-b5a0-8d12d664a506": {
+        "CustomResponse6829f10b-d4aa-47f8-ae05-f86b995601e8": {
             "properties": {
                 "ret_code": {
                     "type": "integer",
