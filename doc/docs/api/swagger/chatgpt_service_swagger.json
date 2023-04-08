@@ -1,0 +1,143 @@
+{
+    "swagger": "2.0",
+    "basePath": "/api/v1",
+    "paths": {
+        "/chat/once": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/CustomResponsea38c017e-cb39-4a82-b5a0-8d12d664a506"
+                        }
+                    }
+                },
+                "summary": "chat once, no stream!",
+                "operationId": "post_chat_once",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/ChatBaseRequest"
+                        }
+                    },
+                    {
+                        "name": "X-Fields",
+                        "in": "header",
+                        "type": "string",
+                        "format": "mask",
+                        "description": "An optional fields mask"
+                    }
+                ],
+                "tags": [
+                    "chat"
+                ]
+            }
+        },
+        "/chat/stream": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Stream SSE data in text/event-stream format"
+                    }
+                },
+                "summary": "chat stream",
+                "operationId": "post_chat_stream",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "required": true,
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/ChatBaseRequest"
+                        }
+                    }
+                ],
+                "tags": [
+                    "chat"
+                ]
+            }
+        }
+    },
+    "info": {
+        "title": "ChatGpt service!",
+        "version": "1.0",
+        "description": "ChatGpt service!"
+    },
+    "produces": [
+        "application/json",
+        "text/event-stream"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "tags": [
+        {
+            "name": "chat",
+            "description": "Chat  API"
+        }
+    ],
+    "definitions": {
+        "ChatBaseRequest": {
+            "required": [
+                "prompt",
+                "system_prompt"
+            ],
+            "properties": {
+                "prompt": {
+                    "type": "string",
+                    "description": "Type prompt."
+                },
+                "system_prompt": {
+                    "type": "string",
+                    "description": "System prompt",
+                    "default": "You are ChatGPT, a large language model trained by OpenAI. Respond conversationally"
+                }
+            },
+            "type": "object"
+        },
+        "CustomResponsea38c017e-cb39-4a82-b5a0-8d12d664a506": {
+            "properties": {
+                "ret_code": {
+                    "type": "integer",
+                    "description": "The code of result",
+                    "default": 0
+                },
+                "ret_msg": {
+                    "type": "string",
+                    "description": "The message of result",
+                    "default": "success"
+                },
+                "data": {
+                    "$ref": "#/definitions/ChatBaseOnceResponseFields"
+                }
+            },
+            "type": "object"
+        },
+        "ChatBaseOnceResponseFields": {
+            "required": [
+                "answer"
+            ],
+            "properties": {
+                "answer": {
+                    "type": "string",
+                    "description": "The id of mpc job."
+                }
+            },
+            "type": "object"
+        }
+    },
+    "responses": {
+        "ParseError": {
+            "description": "When a mask can't be parsed"
+        },
+        "MaskError": {
+            "description": "When any error occurs on mask"
+        },
+        "ChatGptError": {},
+        "Exception": {}
+    },
+    "host": "localhost"
+}

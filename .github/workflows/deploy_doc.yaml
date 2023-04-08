@@ -1,0 +1,22 @@
+name: Docs
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+      - run: export PYTHONPATH=$PYTHONPATH:./python
+      - run: pip install -Ur doc/requirements.txt
+      - run: cd dev && bash export_swagger.sh && bash export_errcode_md.sh && cd -
+      - run: cd doc && mkdocs gh-deploy --force
