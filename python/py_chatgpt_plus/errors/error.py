@@ -12,10 +12,14 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #  ==============================================================================
-from py_chatgpt.routes import main
-
-if __name__ == '__main__':
-    main()
+from py_chatgpt_plus.errors import ChatGptError
 
 
+class Success(object):
+    SuccessResponse = ChatGptError()
 
+
+class CommonError(object):
+    Err_RequestParam = ChatGptError(
+        ret_code=100, ret_msg="request param invalid"
+    )

@@ -12,20 +12,10 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #  ==============================================================================
-from typing import Generator
-from py_chatgpt.core.chat_gpt_3 import ChatGptV3
+from py_chatgpt_plus.routes import main
+
+if __name__ == '__main__':
+    main()
 
 
-class ChatService(object):
-    def __init__(self, api_key: str):
-        self._api_key = api_key
 
-    def chat_once(self, prompt: str, system_prompt: str) -> str:
-        cg = ChatGptV3(api_key=self._api_key,
-                       system_prompt=system_prompt)
-        return cg.chat_once(prompt=prompt)
-
-    def chat_stream(self, prompt: str, system_prompt: str) -> Generator:
-        cg = ChatGptV3(api_key=self._api_key)
-        return cg.chat_stream(prompt=prompt,
-                              system_prompt=system_prompt)

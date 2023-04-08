@@ -17,7 +17,7 @@ import os
 
 import yaml
 
-from py_chatgpt.utils.base_utils import Singleton
+from py_chatgpt_plus.utils.base_utils import Singleton
 
 def read_yaml(path: str) -> Any:
     with open(path, "rb") as f:

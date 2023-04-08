@@ -16,7 +16,7 @@
 import argparse
 import json
 
-from py_chatgpt.routes.api import api, app
+from py_chatgpt_plus.routes.api import api, app
 
 def export_schema_to_swagger(dst_file: str):
     """Export schema to swagger json file.

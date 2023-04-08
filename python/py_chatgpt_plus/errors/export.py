@@ -18,7 +18,7 @@ import inspect
 import sys
 from typing import Dict, List, Union
 
-from py_chatgpt.errors import ChatGptError
+from py_chatgpt_plus.errors import ChatGptError
 from pytablewriter import MarkdownTableWriter
 
 module_paths = ["py_chatgpt.errors.error"]

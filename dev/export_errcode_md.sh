@@ -22,5 +22,5 @@ export PYTHONPATH=$PYTHONPATH:${PWD}/python
 
 # export errcode as md file to docs dir
 export server_errcode_md_file=${PWD}/doc/docs/api/errcode/chatgpt_service_errcode.md
-python python/py_chatgpt/errors/export.py --dst_file ${server_errcode_md_file}
+python python/py_chatgpt_plus/errors/export.py --dst_file ${server_errcode_md_file}
 

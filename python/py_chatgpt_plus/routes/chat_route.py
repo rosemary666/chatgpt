@@ -17,9 +17,9 @@ from flask_restx import Resource, fields
 
 from loguru import logger
 
-from py_chatgpt.services.chat import ChatService
-from py_chatgpt.routes.api import api, custom_response, get_json_result
-from py_chatgpt.utils.conf import conf_inst
+from py_chatgpt_plus.services.chat import ChatService
+from py_chatgpt_plus.routes.api import api, custom_response, get_json_result
+from py_chatgpt_plus.utils.conf import conf_inst
 
 ns = api.namespace("chat", description="Chat  API")
 

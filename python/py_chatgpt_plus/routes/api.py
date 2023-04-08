@@ -18,7 +18,7 @@ from typing import Any
 from flask import Flask, Blueprint
 from flask_restx import Api, fields
 
-from py_chatgpt.errors.error import ChatGptError, Success
+from py_chatgpt_plus.errors.error import ChatGptError, Success
 
 app = Flask(__name__)
 

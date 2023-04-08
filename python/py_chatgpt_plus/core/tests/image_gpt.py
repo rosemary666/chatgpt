@@ -12,7 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #  ==============================================================================
-from py_chatgpt.core.image_gpt import ImageGpt
+from py_chatgpt_plus.core.image_gpt import ImageGpt
 
 api_key = "****"
 

@@ -21,13 +21,15 @@ chatgpt库的封装调用, 支持流式和非流式。
 
 ### 安装
 ```shell
-pip install py-chatgpt
+pip install py-chatgpt-plus
 ```
 
 ### 底层调用 
 - 非流式
+
 ```python
-from py_chatgpt.core.chat_gpt_3 import ChatGptV3
+from py_chatgpt_plus.core.chat_gpt_3 import ChatGptV3
+
 cg = ChatGptV3(
     api_key="*****",
     system_prompt="请帮我把以下的工作内容填充为工作周报，用markdown格式以分点叙述的方式输出:",
@@ -38,14 +40,15 @@ cg.save_conversations("./conversations.json")
 ```
 
 - 流式
+
 ```python
-from py_chatgpt.core.chat_gpt_3 import ChatGptV3
+from py_chatgpt_plus.core.chat_gpt_3 import ChatGptV3
 
 cg = ChatGptV3(
-    api_key="****" #请填写自己生成的api_key
+    api_key="****"  # 请填写自己生成的api_key
 )
 
-streams = cg.chat_stream(prompt="**") #返回的流式结果
+streams = cg.chat_stream(prompt="**")  # 返回的流式结果
 for stream in streams:
     print(stream)
 ```
@@ -55,7 +58,7 @@ for stream in streams:
 
 服务启动方式: 
 ```shell
-1. cd python/py_chatgpt      
+1. cd python/py_chatgpt_plus      
 2. 修改conf/service.yaml配置文件(重点配置api_key和proxy)      
 3. 执行run.sh即可启动   
 ```

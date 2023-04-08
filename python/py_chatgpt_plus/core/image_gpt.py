@@ -15,7 +15,7 @@
 from typing import List
 import base64
 
-from py_chatgpt.utils.http_call import HttpCall
+from py_chatgpt_plus.utils.http_call import HttpCall
 
 
 class ImageGpt(object):

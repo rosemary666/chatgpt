@@ -21,8 +21,8 @@ with open("../README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="py-chatgpt",
-    version="0.1.0",
+    name="py-chatgpt-plus",
+    version="0.2.0",
     author="rosemary666",
     author_email="",
     description="Python chatgpt api",
@@ -31,7 +31,7 @@ setuptools.setup(
     url="https://github.com/rosemary666/chatgpt",
     packages=[
         package for package in find_packages()
-        if package.startswith('py_chatgpt')
+        if package.startswith('py_chatgpt_plus')
     ],
     install_requires=_process_requirements(),
     setup_requires=[],

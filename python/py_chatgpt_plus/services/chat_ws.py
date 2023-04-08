@@ -17,8 +17,8 @@ import websockets
 
 from loguru import logger
 
-from py_chatgpt.utils.conf import conf_inst
-from py_chatgpt.core.chat_gpt_3 import ChatGptV3
+from py_chatgpt_plus.utils.conf import conf_inst
+from py_chatgpt_plus.core.chat_gpt_3 import ChatGptV3
 
 cg = ChatGptV3(
     api_key=conf_inst.chatgpt_api_key,

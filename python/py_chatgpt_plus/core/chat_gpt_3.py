@@ -15,8 +15,8 @@
 import json
 from typing import List, Generator
 
-from py_chatgpt.core.chat_base import ChatAbc
-from py_chatgpt.utils.http_call import HttpCall
+from py_chatgpt_plus.core.chat_base import ChatAbc
+from py_chatgpt_plus.utils.http_call import HttpCall
 
 
 class ChatGptV3(ChatAbc):

@@ -12,7 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #  ==============================================================================
-from py_chatgpt.core.chat_gpt_3 import ChatGptV3
+from py_chatgpt_plus.core.chat_gpt_3 import ChatGptV3
 
 api_key = "*******"
 
