@@ -1,0 +1,11 @@
+server:
+  ip: "127.0.0.1" #启动上层服务的ip地址
+  port: 32675 #启动上层服务的端口地址
+
+log:
+  log_file: "service.log"
+  level: "DEBUG"
+
+chatgpt:
+  api_key: "" # chatgpt的api_key, 访问https://platform.openai.com/account/api-keys获取。
+  proxy: "" #使用的代理地址, 如果可直接访问, 设置为空即可. such as: 127.0.0.1:7890.

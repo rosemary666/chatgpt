@@ -1,0 +1,9 @@
+mkdocs >= 1.1
+mdx_gh_links
+markdown
+lightgallery
+mkdocs-material
+mkdocs-static-i18n
+mkdocs-awesome-pages-plugin
+mkdocs-render-swagger-plugin
+mkdocs-swagger-ui-tag

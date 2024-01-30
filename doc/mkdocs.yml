@@ -1,0 +1,137 @@
+# 网站名称
+site_name: "ChatGpt Document"
+# 网站描述
+site_description: "Document for ChatGpt"
+# 作者信息
+site_author: "rosemary666"
+# 网站（文档中心）的链接
+site_url: "https://rosemary666.github.io/chatgpt/"
+# 版权信息
+copyright: Copyright © 2023 <a Powered by rosemary666 版权所有</a>
+
+# GitHub库的名称
+repo_name: "chatgpt"
+# GitHub库的链接
+repo_url: "https://github.com/rosemary666/chatgpt"
+
+# 指定包含文档源Markdown文件的目录
+docs_dir: docs
+
+theme:
+  name: material
+  nav_style: light
+  highlightjs: true  # 打开代码高亮
+  hljs_style: github       # 代码高亮风格
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+#  custom_dir: docs/material
+  features:
+    - navigation.tabs # 或者切换为tabs or instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+#    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide #为了不让标题行遮挡内容，优化阅读体验，我们设置了让标题行在页面下滑后自动隐藏。
+  hljs_languages:
+    - yaml
+    - c
+    - c++
+    - java
+    - python
+    - go
+  font:
+    text: Roboto
+    code: Roboto Mono
+  language: en
+  palette:
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        toggle:
+          icon: material/weather-night
+          name: 暗色模式
+      - media: "(prefers-color-scheme: dark)"
+        primary: teal
+        scheme: slate
+        toggle:
+          icon: material/weather-sunny
+          name: 亮色模式
+
+nav:
+    - Home: index.md
+    - About:
+          - changelog : about/changelog.md
+    - API:
+        - ServicerAPI: api/swagger/chatgpt_service_swagger.md
+        - ServiceErrcode: api/errcode/chatgpt_service_errcode.md
+
+markdown_extensions:
+    - admonition  # 提示块
+    - footnotes  # 脚注
+    - meta  # 定义元数据，通过文章上下文控制，如disqus
+    - pymdownx.snippets:
+        base_path: 'docs/'
+    - pymdownx.caret  # 下划线上标
+    - pymdownx.tilde  # 删除线下标
+    - pymdownx.critic  # 增加删除修改高亮注释，可修饰行内或段落
+    - pymdownx.details  # 提示块可折叠
+    - pymdownx.inlinehilite  # 行内代码高亮
+    - pymdownx.mark  # 文本高亮
+    - pymdownx.smartsymbols  # 符号转换
+    - pymdownx.superfences  # 代码嵌套在列表里
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - codehilite:    # 代码高亮，显示行号
+        guess_lang: false
+        linenums: true
+    - toc:  # 锚点
+        permalink: true
+    - pymdownx.betterem:  # 对加粗和斜体更好的检测
+        smart_enable: all
+#    - pymdownx.emoji:  # 表情
+#        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.magiclink  # 自动识别超链接
+    - pymdownx.tasklist:  # 复选框checklist
+        custom_checkbox: true
+    - pymdownx.arithmatex:
+        generic: true
+
+plugins:
+    - search
+    - awesome-pages
+    - swagger-ui-tag
+    - i18n:
+        default_language: zh
+        languages:
+#          en: english
+          zh: 中文
+
+extra:
+  analytics:
+    provider: google
+    property: UA-147297392-7
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rosemary666/chatgpt
+  alternate:
+#    - name: English
+#      lang: en
+#      link: ""
+    - name: 中文
+      lang: zh
+      link: "zh/"
+
+extra_javascript:
+  - assets/js/swagger-ui-bundle.js
+
+extra_css:
+  - assets/css/swagger-ui.css
